@@ -1,5 +1,5 @@
 export default function Button() {
     return (
-        <button className="bg-red-200">Test</button>
+        <button className="bg-primary">Test</button>
     )
 }
