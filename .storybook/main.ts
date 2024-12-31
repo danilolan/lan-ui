@@ -1,4 +1,5 @@
 import type { StorybookConfig } from "@storybook/react-vite";
+import postcss from "postcss";
 
 const config: StorybookConfig = {
   stories: ["../src/**/*.mdx", "../src/**/*.stories.@(js|jsx|mjs|ts|tsx)"],
@@ -7,6 +8,14 @@ const config: StorybookConfig = {
     "@storybook/addon-essentials",
     "@chromatic-com/storybook",
     "@storybook/addon-interactions",
+    {
+      name: '@storybook/addon-postcss',
+      options: {
+        postcssLoaderOptions: {
+          implementation: postcss
+        }
+      }
+    }
   ],
   framework: {
     name: "@storybook/react-vite",
